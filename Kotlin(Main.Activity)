@@ -1,0 +1,64 @@
+package com.yourname.socialsparks
+
+import android.graphics.Color
+import android.os.Bundle
+import android.view.animation.AlphaAnimation
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        // UI elements
+        val morningBtn = findViewById<Button>(R.id.btnMorning)
+        val afternoonBtn = findViewById<Button>(R.id.btnAfternoon)
+        val dinnerBtn = findViewById<Button>(R.id.btnDinner)
+        val resetBtn = findViewById<Button>(R.id.btnReset)
+        val suggestionText = findViewById<TextView>(R.id.txtSuggestion)
+
+        // Helper function for fade-in animation
+        fun animateText() {
+            val fadeIn = AlphaAnimation(0.0f, 1.0f)
+            fadeIn.duration = 500
+            suggestionText.startAnimation(fadeIn)
+        }
+
+        // Morning button click
+        morningBtn.setOnClickListener {
+            suggestionText.text = "☀️ Good morning! Send a kind message to a family member."
+            suggestionText.setTextColor(Color.parseColor("#FFA726")) // Orange for morning
+            animateText()
+            Toast.makeText(this, "Morning suggestion applied!", Toast.LENGTH_SHORT).show()
+        }
+
+        // Afternoon button click
+        afternoonBtn.setOnClickListener {
+            suggestionText.text = "😂 Afternoon fun! Share a funny meme with someone."
+            suggestionText.setTextColor(Color.parseColor("#29B6F6")) // Blue for afternoon
+            animateText()
+            Toast.makeText(this, "Afternoon suggestion applied!", Toast.LENGTH_SHORT).show()
+        }
+
+        // Dinner button click
+        dinnerBtn.setOnClickListener {
+            suggestionText.text = "🌙 Evening catch-up! Call a family member for a quick chat."
+            suggestionText.setTextColor(Color.parseColor("#8E24AA")) // Purple for evening
+            animateText()
+            Toast.makeText(this, "Dinner suggestion applied!", Toast.LENGTH_SHORT).show()
+        }
+
+        // Reset button click
+        resetBtn.setOnClickListener {
+            suggestionText.text = "Suggestion will appear here"
+            suggestionText.setTextColor(Color.parseColor("#757575")) // Default gray
+            animateText()
+            Toast.makeText(this, "Suggestions reset!", Toast.LENGTH_SHORT).show()
+        }
+    }
+}
+       
