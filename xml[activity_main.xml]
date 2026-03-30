@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="#F5F5F5">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What time of day is it?"
+        android:textSize="20sp"
+        android:textColor="#333333"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Morning Button -->
+    <Button
+        android:id="@+id/btnMorning"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Morning"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false" />
+
+    <!-- Afternoon Button -->
+    <Button
+        android:id="@+id/btnAfternoon"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Afternoon"
+        android:layout_marginBottom="10dp"
+        android:textAllCaps="false" />
+
+    <!-- Dinner Button -->
+    <Button
+        android:id="@+id/btnDinner"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Dinner"
+        android:layout_marginBottom="40dp"
+        android:textAllCaps="false" />
+
+    <!-- Suggestion Text -->
+    <TextView
+        android:id="@+id/txtSuggestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suggestion will appear here"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Reset Button -->
+    <Button
+        android:id="@+id/btnReset"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:backgroundTint="#8E24AA"
+        android:textColor="#FFFFFF"
+        android:textAllCaps="false" />
+
+</LinearLayout>
